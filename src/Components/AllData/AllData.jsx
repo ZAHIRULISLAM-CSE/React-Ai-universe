@@ -24,8 +24,6 @@ const AllData = () => {
         .then(response => response.json())
         .then( data =>setModalData(data.data));
     },[apiId])
-    console.log(modalData);
-   
     return (
         <div>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6 mb-6 mx-5'>
@@ -33,7 +31,7 @@ const AllData = () => {
                 data.slice(0,limit? 12: 6).map((singleData,index)=><SingleData data={singleData} cardid={setId} key={index}></SingleData>)
             }
         </div>
-        <Modal></Modal>
+        <Modal modalData={modalData}></Modal>
         {       
                  !limit && (<div className='text-center'>
                  <button onClick={showAllButton} className="btn btn-secondary">See More</button>
