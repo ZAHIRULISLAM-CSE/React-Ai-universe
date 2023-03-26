@@ -1,6 +1,6 @@
 import React from "react";
 
-const Modal = () => {
+const Modal = (props) => {
   return (
     <div>
       <input type="checkbox" id="my-modal" className="modal-toggle" />
