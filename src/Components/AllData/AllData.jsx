@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Modal from '../Modal/Modal';
 import SingleData from '../SingleData/SingleData';
 
 const AllData = () => {
@@ -21,9 +22,13 @@ const AllData = () => {
                 data.slice(0,limit? 12: 6).map((singleData,index)=><SingleData data={singleData} key={index}></SingleData>)
             }
         </div>
-        <div className='text-center'>
-        <button onClick={showAllButton} className="btn btn-secondary">See More</button>
-        </div>
+        <Modal></Modal>
+        {       
+                 !limit && (<div className='text-center'>
+                 <button onClick={showAllButton} className="btn btn-secondary">See More</button>
+                 </div>)   
+        }
+           
         </div>
     );
 };

@@ -26,10 +26,11 @@ const SingleData = (props) => {
                     </span>
                 </div>
                 <div>
-                    <i className="fa-solid fa-arrow-right"></i>
+                <label  htmlFor="my-modal">
+                    <i  className="fa-solid fa-arrow-right"></i>
+                </label>   
                 </div>
             </div>
-            
           </div>
         </div>
       </div>
